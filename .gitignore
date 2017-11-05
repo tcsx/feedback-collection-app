@@ -1,0 +1,25 @@
+node_modules
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+#Vscode
+.vscode
