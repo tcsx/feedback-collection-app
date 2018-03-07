@@ -1,11 +1,23 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const {mongoURI} = require('./config/keys');
+const cookieSession = require('cookie-session');
+const passport = require('passport');
+const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
 
-mongoose.connect('mongodb://hehe:xixihehe@ds149905.mlab.com:49905/emaily-dev');
-const app = express(mongoURI);
+mongoose.connect(keys.mongoURI);
+const app = express();
+
+app.use(
+    cookieSession({
+        maxAge: 7*24*60*60*1000,
+        keys: [keys.cookieKey]
+    })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 
