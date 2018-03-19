@@ -13,9 +13,12 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+app.set('trust proxy');
+
 app.use(bodyParser.json());
 app.use(
   cookieSession({
+    secure: true,
     maxAge: 30 * 24 * 60 * 60 * 1000,
     keys: [keys.cookieKey]
   })
