@@ -9,6 +9,7 @@ import App from './components/App';
 import reducers from './reducers';
 import { unregister } from './registerServiceWorker';
 
+unregister();
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
@@ -16,4 +17,4 @@ ReactDOM.render(
   <Provider store={store}><App /></Provider>,
   document.querySelector('#root')
 );
-unregister();
+
