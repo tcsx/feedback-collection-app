@@ -23,7 +23,6 @@ module.exports = app => {
 
   app.post('/api/surveys/webhooks', (req, res) => {
     const p = new Path('/api/surveys/:surveyId/:choice');
-    req.body.forEach(console.log);
 
     const events = _.chain(req.body)
       .map(({ email, url }) => {
@@ -52,9 +51,6 @@ module.exports = app => {
         ).exec();
       })
       .value();
-
-    console.log(events);
-
     res.send({});
   });
 

@@ -1,4 +1,19 @@
 body {
     background-image: url("./background.jpg");
     background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+form {
+    margin-top: 10px;
+}
+
+form > div {
+    padding: 0px 10px;
+    border-radius: 3px;
+    opacity: 0.95;
+}
+
+.error {
+    margin-bottom: 10px;
 }
