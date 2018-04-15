@@ -2,6 +2,7 @@ body {
     background-image: url("./background.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
+    background-color: #060f06fa;
 }
 
 form {
@@ -10,10 +11,18 @@ form {
 
 form > div {
     padding: 0px 10px;
-    border-radius: 3px;
+    border-radius: 2px;
     opacity: 0.95;
 }
 
 .error {
     margin-bottom: 10px;
+}
+
+.review {
+    background-color: white;
+    opacity: 0.95;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 0px 10px;
 }
