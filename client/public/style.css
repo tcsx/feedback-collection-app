@@ -1,5 +1,5 @@
-body {
-    background-image: url("./background.jpg"), url("./bg2.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat, repeat;
+html {
+    background-image: url("./background.jpg");
+    min-width: 600px;
+    background-size:cover;
 }
